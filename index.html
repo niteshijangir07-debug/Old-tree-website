@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Old Tree | Handcrafted Furniture</title>
+
+  <meta name="description" content="Old Tree creates handcrafted wooden furniture with timeless design, quality craftsmanship and custom furniture solutions.">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -26,11 +33,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 28px;
-      letter-spacing: 3px;
+      font-size: 27px;
+      letter-spacing: 4px;
       font-weight: bold;
     }
 
@@ -41,23 +51,33 @@
       font-size: 15px;
     }
 
+    nav a:hover {
+      color: #d4a373;
+    }
+
     .hero {
-      min-height: 80vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
+
       background:
-        linear-gradient(rgba(35,25,18,0.55), rgba(35,25,18,0.55)),
+        linear-gradient(rgba(35,25,18,0.58), rgba(35,25,18,0.58)),
         url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=80")
         center/cover;
+
       color: white;
     }
 
+    .hero-content {
+      max-width: 850px;
+    }
+
     .hero h1 {
-      font-size: 58px;
-      letter-spacing: 6px;
+      font-size: 62px;
+      letter-spacing: 7px;
       margin-bottom: 15px;
     }
 
@@ -70,19 +90,24 @@
       display: inline-block;
       background: #d4a373;
       color: #2f241d;
-      padding: 13px 28px;
+      padding: 14px 30px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 3px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: white;
     }
 
     section {
-      padding: 70px 8%;
+      padding: 75px 8%;
       text-align: center;
     }
 
     section h2 {
-      font-size: 36px;
+      font-size: 38px;
       margin-bottom: 20px;
     }
 
@@ -97,34 +122,59 @@
       gap: 25px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 35px;
+      margin-top: 40px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      width: 280px;
+      padding: 35px 25px;
+      width: 290px;
       box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      border-radius: 4px;
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-size: 23px;
+    }
+
+    .card p {
+      color: #66584d;
+    }
+
+    .about {
+      background: #eee5d9;
     }
 
     .contact {
       background: #e9dfd2;
     }
 
+    .contact p {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .whatsapp {
+      margin-top: 20px;
+      background: #3b6b42;
+      color: white;
+    }
+
+    .whatsapp:hover {
+      background: #2d5132;
+    }
+
     footer {
       background: #2f241d;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 28px;
       font-size: 14px;
     }
 
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 12px;
@@ -132,15 +182,152 @@
 
       nav a {
         margin: 0 7px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 78vh;
       }
 
       .hero h1 {
         font-size: 42px;
+        letter-spacing: 4px;
       }
 
       .hero p {
         font-size: 17px;
       }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      section h2 {
+        font-size: 31px;
+      }
     }
   </style>
-</
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">OLD TREE</div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#craft">Craft</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>OLD TREE</h1>
+
+      <p>
+        Handcrafted Furniture. Timeless Character.
+      </p>
+
+      <a href="#contact" class="button">
+        Enquire Now
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section id="about">
+
+    <h2>Our Story</h2>
+
+    <p class="intro">
+      Old Tree is a handcrafted furniture brand creating wooden pieces
+      inspired by timeless design, natural materials and traditional
+      craftsmanship.
+    </p>
+
+  </section>
+
+
+  <section id="craft" class="about">
+
+    <h2>What We Create</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Handcrafted Furniture</h3>
+        <p>
+          Carefully crafted wooden furniture designed to bring warmth
+          and character into every space.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Furniture</h3>
+        <p>
+          Have a specific idea? We can create custom furniture according
+          to your requirements and design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Bulk Orders</h3>
+        <p>
+          Custom manufacturing solutions are available for bulk and
+          business orders.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>Made With Character</h2>
+
+    <p class="intro">
+      Every piece is made with attention to detail, combining the
+      beauty of wood with practical and timeless design.
+    </p>
+
+  </section>
+
+
+  <section id="contact" class="contact">
+
+    <h2>Let's Create Something</h2>
+
+    <p>
+      Have a furniture requirement or custom idea?
+    </p>
+
+    <p>
+      Get in touch with Old Tree.
+    </p>
+
+    <a
+      class="button whatsapp"
+      href="https://wa.me/918005751909"
+      target="_blank">
+      WhatsApp Us
+    </a>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 Old Tree — Handcrafted Furniture
+
+  </footer>
+
+</body>
+</html>
